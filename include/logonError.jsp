@@ -40,7 +40,7 @@
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
 </head>
-    
+
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
 <body>
@@ -48,19 +48,19 @@
 	<div class="page-logo">
 		<a class="brand" href="index.html">
         <img src="${contextPath}/assets/logos/logo.png" alt=""/>
-        
+
             <!--<img src="${contextPath}/assets/admin/layout4/img/logo-big.png" alt="logo"/>-->
 
 		</a>
 	</div>
 	<div class="page-body">
-        
+
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="login-form text-left">
                     <h3 class="form-title"><%= pageContext.getServletContext().getInitParameter("login_title") %></h3>
                 </div>
-                
+
                 <div class="Metronic-alerts alert alert-danger fade in">
                     <h4>Invalid Username Or Password</h4>
                 </div>
@@ -77,27 +77,27 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-1">
-                
+
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-md-4 col-md-offset-3">
-                
+
             </div>
         </div>
-        
-        
-        
-        
+
+
+
+
 		<!--<img class="page-lock-img" src="./assets/admin/pages/media/profile/profile.jpg" alt="">-->
         <!--<img class="page-lock-img" src="./assets/admin/pages/media/profile/avatar.png" alt="">
-        
-		<div class="page-lock-info"> 
-			<h1>Bob Nilson</h1> 
+
+		<div class="page-lock-info">
+			<h1>Bob Nilson</h1>
 			<span class="email">
 			bob@keenthemes.com </span>
-			<span class="locked"> 
+			<span class="locked">
 			Locked </span>
 			<form class="form-inline" action="index.html">
 				<div class="input-group input-medium">
@@ -106,7 +106,7 @@
 					<button type="submit" class="btn blue icn-only"><i class="m-icon-swapright m-icon-white"></i></button>
 					</span>
 				</div>
-				
+
 				<div class="relogin">
 					<a href="login.html">
 					Not Bob Nilson ? </a>
@@ -122,7 +122,7 @@
 <!-- BEGIN CORE PLUGINS -->
 <!--[if lt IE 9]>
 <script src="../../assets/global/plugins/respond.min.js"></script>
-<script src="../../assets/global/plugins/excanvas.min.js"></script> 
+<script src="../../assets/global/plugins/excanvas.min.js"></script>
 <![endif]-->
 <script src="${contextPath}/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
 <script src="${contextPath}/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
@@ -138,7 +138,7 @@
 <script src="${contextPath}/assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
 <script src="${contextPath}/assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
 <script>
-jQuery(document).ready(function() {    
+jQuery(document).ready(function() {
     Metronic.init(); // init metronic core components
     Layout.init(); // init current layout
     //Lock.init();

@@ -41,7 +41,7 @@ CREATE VIEW tomcat_users AS
 	SELECT users.user_name, users.user_password, roles.role_name
 	FROM (roles INNER JOIN users ON roles.role_id = users.role_id)
 	WHERE users.is_active = true;
-    
+
 DROP VIEW tomcat_users;
 CREATE OR REPLACE VIEW tomcat_users AS 
  SELECT users.user_name,
@@ -87,6 +87,3 @@ SELECT pg_catalog.setval('roles_role_id_seq', 3, true);
 INSERT INTO users (user_id, role_id, user_name, full_name, primary_email)
 VALUES (0, 0, 'root', 'root', 'root@localhost');
 SELECT pg_catalog.setval('users_user_id_seq', 1, true);
-
-
-

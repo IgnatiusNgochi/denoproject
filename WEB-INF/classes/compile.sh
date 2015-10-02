@@ -9,8 +9,8 @@ cd $(dirname $0)
 
 
 
-TOMCAT_PATH=/Users/henriquedn/Lab/Apache/tomcat.eclipse
-WEBAPP_NAME=hhs
+TOMCAT_PATH=/Users/henriquedn/Lab/Apache/tomcat
+WEBAPP_NAME=denoproject
 
 export PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/bin/
 export CLASSPATH=$TOMCAT_PATH/lib/servlet-api.jar
@@ -18,6 +18,6 @@ export CLASSPATH=$CLASSPATH:$TOMCAT_PATH/webapps/$WEBAPP_NAME/WEB-INF/lib/json-s
 
 echo 'Compiling .........'
 
-javac classes/org/hhs/UploadCsvServlet.java
+javac org/hhs/UploadCsvServlet.java
 
 echo 'Done Compiling'
