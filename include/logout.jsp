@@ -1,27 +1,15 @@
-<%@ page language="java" import="java.sql.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <%
-if(session.getAttribute("SomeAttribute")== null)
-{
-give ur message and redirect
-to some page say login page
-ex:- out.println("<script>parent.location.href='Login.jsp'</script>");
-
-}
+	session.invalidate();
 %>
-and on logout write this code
-
-<%
-
-session.invalidate();
-out.println("<script>parent.location.href='Login.jsp'</script>");
-%>
-<html>   
-<head> My Logout page   </head>    
+<html>
+<head>Logout</head>
 <body>
- <a href="index.jsp"> Login again </a>    
-    
-    
-</body>    
-    
-    
-    </html>
+
+    <h1>You are Logged Out</h1>
+ <a href="${contextPath}"> Login again </a>
+
+
+</body>
+</html>

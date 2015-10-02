@@ -1,10 +1,10 @@
 <%
-/*if(request.isUserInRole("admin")){
+if(request.isUserInRole("admin")){
     response.sendRedirect("admin");
 }
 if(request.isUserInRole("student")){
     response.sendRedirect("student");
-}*/
+}
 %>
 
 

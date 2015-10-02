@@ -19,7 +19,7 @@
                             <form class="form-signin" action="j_security_check" method="post">
                                 <input type="text" class="form-control" placeholder="Email" name="j_username" required autofocus>
                                 <br>
-                                <input type="password" class="form-control" placeholder="Password" name="j_password " required>
+                                <input type="password" class="form-control" placeholder="Password" name="j_password" required>
                                 <br>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">
                                 Sign in</button>
@@ -51,9 +51,9 @@
                  delay:4000,
               cover:true,
             slides: [
-            { src: 'images/image1.jpg' },
-            { src: 'images/image2.jpg' },
-            { src: 'images/image3.jpg' }
+            { src: '${contextPath}/images/image1.jpg' },
+            { src: '${contextPath}/images/image2.jpg' },
+            { src: '${contextPath}/images/image3.jpg' }
             ]
             });
         </script>

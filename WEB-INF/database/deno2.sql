@@ -43,7 +43,7 @@ CREATE VIEW tomcat_users AS
 	WHERE users.is_active = true;
 
 DROP VIEW tomcat_users;
-CREATE OR REPLACE VIEW tomcat_users AS 
+CREATE OR REPLACE VIEW tomcat_users AS
  SELECT users.user_name,
 users.primary_email,
     users.user_password,
@@ -85,5 +85,8 @@ INSERT INTO roles (role_id, role_name) VALUES (1, 'student');
 SELECT pg_catalog.setval('roles_role_id_seq', 3, true);
 
 INSERT INTO users (user_id, role_id, user_name, full_name, primary_email)
-VALUES (0, 0, 'root', 'root', 'root@localhost');
-SELECT pg_catalog.setval('users_user_id_seq', 1, true);
+VALUES (0, 0, 'root', 'root fullname', 'root@localhost'),
+(1,1,'student', 'John Doe', 'henrydkm@gmail.com');
+SELECT pg_catalog.setval('users_user_id_seq', 2, true);
+
+update users set user_password = md5('pass') , first_password = 'pass';
