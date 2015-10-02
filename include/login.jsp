@@ -51,9 +51,9 @@
                  delay:4000,
               cover:true,
             slides: [
-            { src: '${contextPath}/images/image1.jpg' },
-            { src: '${contextPath}/images/image2.jpg' },
-            { src: '${contextPath}/images/image3.jpg' }
+            { src: '${contextPath}/assets/images/login/image1.jpg' },
+            { src: '${contextPath}/assets/images/login/image2.jpg' },
+            { src: '${contextPath}/assets/images/login/image3.jpg' }
             ]
             });
         </script>
