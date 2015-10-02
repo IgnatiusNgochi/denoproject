@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>DENO</display-name>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<resource-ref>
+		<description>Mail Session</description>
+		<res-ref-name>mail/Session</res-ref-name>
+		<res-type>javax.mail.Session</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	<servlet>
+		<servlet-name>upload</servlet-name>
+		<servlet-class>org.hhs.UploadCsvServelet</servlet-class>
+	</servlet>
+	<security-constraint />
+	<http-method>GET</http-method>
+	<http-method>POST</http-method>
+	<auth-constraint>
+		<role-name>student</role-name>
+		<role-name>admin</role-name>
+		<role-name>root</role-name>
+	</auth-constraint>
+	<!-- Default login configuration uses form-based authentication -->
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>Form-Based Authentication Area</realm-name>
+		<form-login-config>
+			<form-login-page>./include/login.jsp</form-login-page>
+			<form-error-page>./inlude/logonError.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+	<!-- Security roles referenced by this web application -->
+	<security-role>
+		<role-name>student</role-name>
+		<role-name>admin</role-name>
+		<role-name>root</role-name>
+	</security-role>
+	<error-page>
+		<error-code>./jsp/403</error-code>
+		<location>./include/logonError.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>408</error-code>
+		<location>/error/408.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>401</error-code>
+		<location>/error/401.jsp</location>
+	</error-page>
+</web-app>
