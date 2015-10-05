@@ -17,7 +17,7 @@ export CLASSPATH=$TOMCAT_PATH/lib/servlet-api.jar
 export CLASSPATH=$CLASSPATH:$TOMCAT_PATH/webapps/$WEBAPP_NAME/WEB-INF/lib/json-simple-1.1.1.jar
 
 echo 'Compiling .........'
-
-javac org/hhs/UploadCsvServlet.java
+javac org/hhs/db/*.java
+#javac org/hhs/*.java
 
 echo 'Done Compiling'
